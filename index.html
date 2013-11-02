@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>A Nice Day For A Welsh Wedding - Kate & Patrick's Wedding Site</title>
+<meta name="description" content="Save the date - Responsive, retina-ready, Wedding Invitation">
+<meta name="author" content="PeHaa Hetman and PinkOnHead">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+<!--   Google fonts  -->
+<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=BenchNine:700' rel='stylesheet' type='text/css'>
+<!--   main stylesheet  -->
+<link rel="stylesheet" href="stylesheets/yellow.css" type="text/css" media="screen" title="no title">
+<!-- other color options : green.css, pink.css, pistachio.css, salmon.css, turquoise.css, violet.css, yellow.css -->
+
+  <script src='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
+  <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
+  <!--[if lte IE 8]>
+    <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet' >
+  <![endif]-->
+
+
+<style type="text/css">
+
+@media only screen and (min-width: 768px) {
+	.ceremony-1, .ceremony-2 {		
+		float: left;
+		width: 46%;
+		padding-top: 0;
+		margin: 2%;
+	}
+
+}
+  .no-touch .nav-container {
+    z-index: 1001;
+}
+
+.no-boxshadow {
+	box-shadow: 0 0 0 0 ;
+	padding-bottom: 0.1em;
+}
+
+
+.travel p {
+	font-size: 20px;
+	text-align: justify;
+}
+#mapContainer {
+	background: white;
+	margin: 0px;
+	padding: 20px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#map {  
+	width:100%; 
+	height:500px;	
+}
+</style>
+
+
+
+<!-- 
+
+<script>
+// iOS viewport scaling bug fix
+// https://gist.github.com/901295
+// Rewritten version
+// By @mathias, @cheeaun and @jdalton
+
+(function(doc) {
+
+var addEvent = 'addEventListener',
+    type = 'gesturestart',
+    qsa = 'querySelectorAll',
+    scales = [1, 1],
+    meta = qsa in doc ? doc[qsa]('meta[name=viewport]') : [];
+
+function fix() {
+	meta.content = 'width=device-width,minimum-scale=' + scales[0] + ',maximum-scale=' + scales[1];
+	doc.removeEventListener(type, fix, true);
+}
+
+if ((meta = meta[meta.length - 1]) && addEvent in doc) {
+	fix();
+	scales = [.25, 1.6];
+	doc[addEvent](type, fix, true);
+}
+
+}(document));
+</script>
+ -->
+
+<!-- custom modernizr build -->
+<script src="javascript/modernizr.js"></script>
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!-- GoogleMaps -->
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<!-- GoogleMaps, photo gallery and slider -->
+<script src="javascript/libraries-ck.js"></script>
+<!-- custom js class -->
+<script src="javascript/save_the_date-ck.js"></script>
+
+<!-- SETTINGS STARTS -->
+<script>
+$(document).ready(function() {
+	// init Save the Date
+	save_the_date.init({
+		weddingDate: "2014/07/06, 11:00", 
+		//Date : enter your wedding date
+    labels: ["days", "hours", "minutes", "secs"], 
+		//Array of strings : labels of time units
+		sendServerMessages: ["Thank you.", "Sorry, your message could not be sent due to an error."],
+		//Array of strings : Messages from the server on send
+		gallery : ["images/gallery/gallery1.jpg", "images/gallery/gallery2.jpg", "images/gallery/gallery3.jpg", "images/gallery/gallery4.jpg"],
+		//Array image pathes
+		titles : ['Just us', 'Reception', 'Flowers we chose', 'In the eyes'],
+		//Array of strings : corresponding titles
+		});	
+});
+</script>
+<!-- SETTINGS ENDS -->
+
+
+</head>
+<!--[if lt IE 9]> <body  id="top" class="ie-fix"><![endif]-->	
+<!--[if (gt IE 8)|!(IE)]><!--> <body  id="top"><!--<![endif]-->
+	
+	<!--- NAVIGATION STARTS -->
+	<div class="nav-container">
+		<div class="nav">
+			<a  id="full-menu" href="#">&equiv;</a>
+			<a class="active to-scroll" href="#top">Home</a>
+			<a class="to-scroll" href="#about">About Us</a>
+			<a class="to-scroll" href="#ceremony">Venues</a>
+			<a class="to-scroll" href="#welshwedding">Festivities</a>
+			<a class="to-scroll" href="#travel">Travel</a>
+			<a class="to-scroll" href="#stay">Hotels etc</a>
+			<!--<a href="#" id="gallery">Gallery</a>-->
+			<!--<a class="to-scroll" href="#rsvp">R.S.V.P.</a>-->
+			<div class="effect"></div>
+		</div>
+	</div>
+	<!--- NAVIGATION ENDS -->
+	
+	<!-- HEADER STARTS -->
+	<header class="header" role="banner">
+				<h1 class="wrapper"><span>Kate</span> & <span>Patrick</span></h1>
+				<div class="images"><span class="her pile"></span><span class="him pile"></span></div> 
+				<h2>
+					<span class="event">are getting married...</span>
+					<span class="date">7th of June 2014</span>
+					<span id="timer" class="timer"></span>
+				</h2>		
+	</header>	
+	<!-- HEADER ENDS -->
+	
+	<!--- MAIN CONTENT STARTS -->
+	<div class="content">
+	
+			<!-- ABOUT SECTION STARTS -->
+			<section id="about" class="about clearfix">
+				<div class="she">
+					<p>
+						<strong>Catherine Emma Jones</strong> is a fiery celt, with ginger hair. She loves her homeland of Wales, she also loves London. She is full of good ideas but does not always follow through. The mobile she is hand sowing for Luc will be completed around the time he starts to crawl when  has absolutely no interest in lying on his back. She is  a little bit geeky! 
+						</p>
+				</div>
+				<div class="he">
+					<p>
+						<strong>Patrick Weber</strong> is a laid back Luxembourger.He also loves his homeland.  He has good ideas and is much better at not getting distracted than Kate. He is not making a mobile for Luc. He is very geeky. 
+					</p>
+				</div>
+				<div class="they">
+					<p><strong>They</strong> met at university more than 10 years ago. Patrick was always late for lectures, Kate was always early for lectures. This pattern continued even when they were dating. They fell in love during a trip to Thorpe Park. In their household being a geek is a badge of honour. They have a wonderful son. 
+					</p>
+				</div>	
+			</section>
+			<!-- ABOUT SECTION ENDS -->
+			
+			
+			<!-- CEREMONY SECTION STARTS -->
+			<section  id="ceremony" class="flex-container ceremony no-boxshadow">
+				
+				<div class="flexslider">
+					<ul class="slides">
+						<li style="background-image: url(images/slider03.jpg);"></li>
+						<li style="background-image: url(images/slider02.jpg);"></li>
+						<li class="fixed" style="background-image: url(images/slider01.jpg);"></li>
+					</ul>
+				</div>
+				
+				<div class="wrapper clearfix">
+					
+						<h2 class="title">Venues</h2>
+						
+						<div>
+							<p>The wedding will take place on the lovely Gower Peninsula, Wales, UK.</p>
+						</div>
+						<div class="ceremony-1">
+							<h3>Ceremony</h3>
+							<span class="image pile">
+								<img src="images/swansea.jpg" width="300" height="300" alt="hall">
+							</span>
+
+							<p>10:30</p>
+							<h3>Brangwyn Hall, Swansea</h3>
+							<p>A civil wedding ceremony will be held at the Lord Major's Room. All invitees, young and old are welcome.	
+							 
+						‎	</p>
+						<p><a href='#' onclick="showPopup('ppthranv'); return false;">Show me on the map</a></p>
+						
+		
+						</div>
+						<div class="ceremony-2">
+							<h3>Reception</h3>
+							<span class="image pile">
+								<img src="images/penmaenHouse.jpg" width="300" height="300" alt="Reception">
+							</span>
+
+							<p>from 12:00</p>
+							<h3>Penmaen House, Gower</h3>
+							<p>The wedding breakfast and evening party will take place here. Parking is provided for cars and we will arrange transport to take merry late night revellers back to their accomodation.</p>
+							<p><a href='#' onclick="showPopup('op6jw3re'); return false;">Show me on the map</a></p>
+						</div>
+
+					
+					<!--<iframe width='100%' height='400' frameBorder='0' src='http://a.tiles.mapbox.com/v3/petzlux.map-lkhnbaqj.html#12/51.587256422775546/-4.07318115234375'></iframe>
+					-->
+					</div>	
+
+			
+			</section>
+	<div id='mapContainer'>
+				<div id='map'></div>
+			</div>			
+			<!-- CEREMONY SECTION ENDS -->
+			
+			<!-- Party SECTION STARTS -->
+			<section  id="welshwedding" class="flex-container registrys">				
+				<div class="wrapper clearfix">
+					
+						<h2 class="title"> Festivities</h2>
+						
+						<div >
+							<p align="center">this is work in progress...the initial plan may change as we decide what we want to do....by the way this is a child friendly wedding. </br></br>
+
+								<strong>11 am Civil Wedding Ceremony </strong> & a couple of photos <a href="http://goo.gl/maps/9B9lG"> Guildhall </a>, Swansea</br></br>
+
+								11 40 ish make way back to Penmaen House, <a href="http://goo.gl/maps/By8lr"> Penmaen </a>, Gower for Food &amp; festivities</br></br>
+								 
+								<strong>from 12 Merriment begins </strong> with welcome drinks and some fresh sea air </br></br>
+
+								<strong>around 13 00 ish wedding breakfast </strong>starts </br></br>
+
+								<strong>around 16 00 Chill out </strong>, drink, relax, more party games,  go for a walk on the beach..</br></br>
+
+								<strong>around 19:30 ish evening BBQ and some dancing </br></br>
+							</p>
+						</div>
+					</div>
+					
+			</section>
+			 <!---welshwedding SECTION ENDS -->
+<!-- Travel SECTION STARTS -->
+			<section  id="travel" class="flex-container ceremony">
+				
+				<div class="flexslider">
+					<ul class="slides">
+						<li style="background-image: url(images/slider03.jpg);"></li>
+						<li style="background-image: url(images/slider02.jpg);"></li>
+						<li class="fixed" style="background-image: url(images/slider01.jpg);"></li>
+					</ul>
+				</div>
+				
+				<div  class="wrapper clearfix" style="background:none;">
+					
+						<h2 class="title">Travel</h2>
+						<h3>How to get the Gower</h3>
+							<p> There are lots of different travel options, here are just a few....
+							</p>
+						<div class="ceremony-1 travel">
+							<h4>Fly Drive</h4>
+							<p>
+								1)Fly to London Heathrow with British Airways </br>
+
+								2) Hire car and <a href="http://goo.gl/maps/x4QkU"> drive </a>(depending on when you land this could take anywhere between 3 and 5 hours). </br>
+								
+								Near Heathrow is the M4 motorway which is a long road that connects London and Swansea, so basically you keep driving until you reach nearly the end of the motorway. We would avoid driving between 4 and 7 pm in the evening you will hit commuters driving home from the big cities of London and Bristol on the roads and if there is an accident, chaos ensues. </br> Google says this drive should take 3 hours and 4 minutes! 
+								</br></br>
+							‎</p>
+						</div>
+						<div class="ceremony-2 travel">
+						<h4>Fly & Train or Bus & Taxi</h4>
+							<p>
+								
+								1) Fly to London Heathrow with British Airways </br>
+
+								2) Take <a href="http://www.nationalrail.co.uk">train </a>from London Heathrow to London Paddington Train station – Note there is a local service that takes about 10 minutes more than the Heathrow express but is half the price.</br>
+								3) Take Train from London Paddington to Swansea (journey is about 3 hours)</br>
+								
+								4) take Taxi to location where you are staying </br>
+								(personally I would avoid staying in Swansea city itself, so check out the where to stay information). If you stay on the Mumbles you may not need a car but if you stay anywhere on the Gower Peninsula public transport is a bit like the bus services available if you live in Tandel :-)  </br>
+
+								4) If you don’t want to take a train you could take the  <a href="http://www.nationalexpress.com/wherewego/airports/index.aspx"> National Express Bus </a>, which you can pick up at Heathrow Airport, it goes directly to Swansea without the need to change. It takes around 4 hours but you don’t have to travel into London and wait for a train. </br>
+							‎</p>
+						</div>
+						
+						<div class="ceremony-1 travel">
+								<h4>Drive</h4>
+									<p>
+								Have an adventure and drive from Luxembourg. You can take <a href="http://www.eurotunnel.com/uk/home/"> Euro Tunnel </a> or the <a href="http://www.directferries.co.uk/">Cross Channel Ferry </a></br>
+								
+								We are going to do this! In fact are doing it this soon - so can let you know how it goes</br>
+								
+								Google says this will take around 9 hours and 14 minutes! 
+								
+								Note: You have to pay to enter Wales if you drive over the Severn Bridge, you don't pay when you leave Wales!</br> </br>
+									</p>
+						</div>
+							<div class="ceremony-2 travel">
+								<h4>Fly and Drive</h4>
+									<p>
+								1) Fly from Luxembourg to Cardiff via Amsterdam, with the KLM city hopper </br>
+
+								2) <a href="http://cardiffairportcarhire.net/resultsota.html?search_uuid=1593603720-1375874179">Hire a car </a> and drive to Swansea. Google says it takes 1 hour and 20 minutes to drive! </br>. 
+								
+								Note: There is only one flight from Amsterdam to Cardiff a day, so if the Luxembourg flight is delayed then you are stuck for a night in Amsterdam airport! Also Cardiff airport does not have good public transport. There is no station, but I think there is a bus.  </br>
+								
+								You could also fly to Bristol via Amsterdam and pick up a hire car there - it is a little bit further from Swansea.</br> 
+								
+								I might try this option soon, so will let you know if it is any good. </br></br>
+							</p>
+							</div>
+					</div>
+			</section>
+		
+			
+			<!--- Information STARTS -->	
+			<section id="stay" class="stay">
+				<div class="wrapper">
+					<h2 class="title">Where to stay</h2> 
+					<h3>Camping, Hotels, B & B, rent a cottage there are lots of options </h3>
+					<p>Will update this page soon... </p>
+	
+	<!--
+					<ul>
+						<li><a href="#"><img src="images/registry/macys.png" width="228" height="43" alt="Macys"></a></li>
+						<li><a href="#"><img src="images/registry/tiffany.png" width="228" height="43" alt="Tiffany"></a></li>
+						<li><a href="#"><img src="images/registry/cratebarrel.png" width="228" height="43" alt="Cratebarrel"></a></li>
+					</ul>
+	-->		
+				</div>
+			</section>
+			<!--- Information ENDS -->
+
+			<!--- RSVP STARTS
+			<section id="rsvp" class="contact">
+					<h2 class="title">R.S.V.P.</h2>
+				<div class="wrapper">
+
+					<div id="note">
+						<p>We look forward to celebrating with you.</p> 
+						<p>Please reply by March 31, 2014.</p>
+					</div>
+					<!--
+					<form action="send.php" method="post">
+						
+						<fieldset>
+							<h3>Please tick if you will be attending?</h3>
+							<div>
+							<div class="checkbox">
+								<input type="checkbox" name="check-ceremony" id="check-ceremony" >
+								<label for="check-ceremony">I (we) will be attending the ceremony.</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="check-reception" id="check-reception" >
+								<label for="check-reception">I (we) will be attending the reception.</label>
+							</div>
+							<div class="checkbox">
+								<input type="checkbox" name="check-party" id="check-party" >
+								<label for="check-reception">I (we) will be attending the evening party.</label>
+							</div>
+							</div>
+						</fieldset>
+
+						<fieldset id="guests">
+							<h3>Guest Details:</h3>
+							<input type="text"  id="adults" name="adults" placeholder="Number of Adult Guests*">
+							<input type="text"  id="children" name="children" placeholder="Number of Children">
+						</fieldset>
+						
+						<fieldset>
+							<h3>Personal Information:</h3>
+							<input type="text" id="name" name="name" placeholder="Your Name*">
+							<input type="email" id="email" name="email" placeholder="Your E-mail*">
+							<textarea name="message" class="form-message" id="message" placeholder="Want to drop us a line ?"></textarea>
+						</fieldset>
+						
+						<input type="submit">
+						
+					</form>
+					
+					
+					<form action="https://docs.google.com/forms/d/1AKi8SPfgByW5jX-l3vQyxEw7FSPi8EFBfPVYNK3wyzI/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
+						<input type="text" name="entry.1649603772" value="" class="ss-q-short" id="entry_1649603772" dir="auto">
+						<input type="submit" name="submit" value="Submit" id="ss-submit">
+					</form>
+					
+					<h3>Or contact us directly:</h3>
+					<div class="contact-details contact-details-1">
+						<h4>Kate</h4>
+						<p>
+							<a href="mailto:catherine.emma.jones@gmail.com?subject=RSVP">catherine.emma.jones@gmail.com</a>
+						</p>
+					</div>
+					<div class="contact-details contact-details-2">
+						<h4>Patrick</h4>
+						<p>+352 621194145</p>
+						<p>+44  7854840450</p>
+						<p>
+							<a href="mailto:petzimilian@googlemail.com?subject=RSVP">petzimilian@googlemail.com</a>
+						</p>
+					</div>
+						
+				</div>
+					
+			</section>
+			 RSVP ENDS -->
+			
+			<!-- FOOTER STARTS -->
+			<footer id="footer">	
+				<p class="copyright"> &copy; 2013 <a href="#">Save the date</a> All rights reserved.</p>
+			</footer>
+			<!-- FOOTER ENDS -->
+			
+		</div>	
+		<!--- MAIN CONTENT ENDS -->
+
+	
+</body>
+
+
+<script type='text/javascript'>
+var map = L.mapbox.map('map', 'petzlux.map-lkhnbaqj');
+
+function showPopup(id){
+	var markers = map.markerLayer.getLayers();
+	for (i = 0; i < markers.length ; i++){
+		if (markers[i].feature.properties.id == id){
+			var marker = markers[i];
+			map.setView(marker.getLatLng(),12);
+			marker.togglePopup();
+		}
+	}
+};
+
+</script>
+</script>
+</html>
